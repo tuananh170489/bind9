@@ -1,4 +1,3 @@
-```sh
 options {
   directory "/var/cache/bind";
   listen-on port 53 { ${IP_SERVER}; };
@@ -11,4 +10,3 @@ options {
   statistics-file "/var/cache/bind/named.stats";
   listen-on-v6 { any; };
 };
-```
