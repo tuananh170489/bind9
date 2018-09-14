@@ -10,3 +10,12 @@ options {
   statistics-file "/var/cache/bind/named.stats";
   listen-on-v6 { any; };
 };
+
+logging {
+  channel b_query {
+  file "/var/log/bind9/query.log" versions 2 size 1m;
+  print-time yes;
+  severity info;
+  };
+category queries { b_query; };
+};
